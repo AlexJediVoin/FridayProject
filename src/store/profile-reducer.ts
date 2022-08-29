@@ -1,30 +1,24 @@
-import { v1 } from "uuid"
 const ADD_PROFILE = "ADD-PROFILE"
 
-type StateType = {
-}
+type StateType = {}
 
-const initialState: StateType ={};
-
-type AddProfileACType = {
-    type: "ADD-PROFILE"
-}
+type AddProfileACType = ReturnType<typeof AddProfileActionCreator>
+const initialState: StateType = {};
 
 export type profileActionType = AddProfileACType;
-export const profileReducer = (state=initialState, action: profileActionType):StateType => {
-    switch (action.type){
+export const profileReducer = (state = initialState, action: profileActionType): StateType => {
+    switch (action.type) {
         case "ADD-PROFILE": {
             return {...state}
         }
-        default:{
+        default: {
             return state;
         }
-
     }
 }
 
-const AddProfileActionCreator = (): AddProfileACType => {
+const AddProfileActionCreator = () => {
     return ({
         type: ADD_PROFILE
-    })
+    } as const)
 }

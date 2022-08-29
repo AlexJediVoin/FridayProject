@@ -1,21 +1,20 @@
 const RECOVER = "RECOVER"
 
-type StateType = {
-}
+type StateType = {}
 
-const initialState: StateType ={};
+const initialState: StateType = {};
 
 type RecoverACType = {
     type: "RECOVER"
 }
 
 export type recoverActionType = RecoverACType;
-export const recoverReducer = (state=initialState, action: recoverActionType):StateType => {
-    switch (action.type){
+export const recoverReducer = (state = initialState, action: recoverActionType): StateType => {
+    switch (action.type) {
         case "RECOVER": {
             return {...state}
         }
-        default:{
+        default: {
             return state;
         }
 

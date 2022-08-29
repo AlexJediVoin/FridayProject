@@ -12,7 +12,6 @@ const Header = () => {
                     <li><Link to={"/password/new"}> Ввод нового пароля</Link></li>
                     <li><Link to={"/test"}> Тестовая</Link></li>
                     <li><Link to={"/profile"}>Профиль</Link></li>
-                    <li></li>
                 </ul>
             </nav>
         </div>
